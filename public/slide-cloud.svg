@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480" role="img">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b2a6b"/><stop offset="1" stop-color="#1f4fd8"/></linearGradient>
+    <linearGradient id="cl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#d9e6ff"/></linearGradient>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#020a24" flood-opacity=".35"/></filter>
+  </defs>
+  <rect width="600" height="480" fill="url(#bg)"/>
+  <circle cx="300" cy="240" r="200" fill="#fff" opacity=".05"/>
+  <circle cx="300" cy="240" r="140" fill="#fff" opacity=".06"/>
+
+  <g stroke="#8ec1ff" stroke-width="3" stroke-dasharray="7 7" fill="none" opacity=".8">
+    <path d="M300 230 L120 120"/><path d="M300 230 L480 120"/><path d="M300 230 L120 370"/><path d="M300 230 L480 370"/>
+  </g>
+
+  <!-- central cloud -->
+  <g filter="url(#sh)">
+    <path d="M230 270 a45 45 0 0 1 8 -88 a60 60 0 0 1 112 -8 a50 50 0 0 1 14 96 Z" fill="url(#cl)"/>
+  </g>
+  <text x="300" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#0b2a6b">Azure</text>
+
+  <!-- nodes -->
+  <g filter="url(#sh)" fill="#fff">
+    <rect x="76" y="82" width="88" height="76" rx="18"/>
+    <rect x="436" y="82" width="88" height="76" rx="18"/>
+    <rect x="76" y="332" width="88" height="76" rx="18"/>
+    <rect x="436" y="332" width="88" height="76" rx="18"/>
+  </g>
+  <!-- Copilot: sparkle -->
+  <path d="M120 98 L126 114 L142 120 L126 126 L120 142 L114 126 L98 120 L114 114 Z" fill="#4169e1"/>
+  <!-- M365: grid -->
+  <g fill="#4169e1"><rect x="468" y="102" width="14" height="14" rx="3"/><rect x="486" y="102" width="14" height="14" rx="3" opacity=".7"/><rect x="468" y="120" width="14" height="14" rx="3" opacity=".7"/><rect x="486" y="120" width="14" height="14" rx="3" opacity=".45"/></g>
+  <!-- Automation: gear-ish circle with arrows -->
+  <circle cx="120" cy="370" r="20" fill="none" stroke="#4169e1" stroke-width="6" stroke-dasharray="10 5"/>
+  <circle cx="120" cy="370" r="7" fill="#4169e1"/>
+  <!-- Security: shield -->
+  <path d="M480 350 L502 359 V378 C502 390 492 398 480 402 C468 398 458 390 458 378 V359 Z" fill="#4169e1"/>
+  <path d="M471 376 l7 7 l12 -14" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#fff" text-anchor="middle">
+    <text x="120" y="188">Copilot</text><text x="480" y="188">Microsoft 365</text>
+    <text x="120" y="438">Automation</text><text x="480" y="438">Security</text>
+  </g>
+</svg>

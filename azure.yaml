@@ -1,0 +1,6 @@
+name: dilt-consults
+services:
+  web:
+    project: .
+    language: js
+    host: appservice
