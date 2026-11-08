@@ -18,8 +18,8 @@ resource plan 'Microsoft.Web/serverfarms@2023-12-01' = {
   properties: { reserved: true }
 }
 
-resource app 'Microsoft.Web/sites@2023-12-01' = {
-  name: 'app-${environmentName}-${token}'
+resource app 'Microsoft.Web/sites@2026-08-01' = {
+  name: 'dilt-consults-ltd-${token}'
   location: location
   kind: 'app,linux'
   tags: {
@@ -31,7 +31,7 @@ resource app 'Microsoft.Web/sites@2023-12-01' = {
     httpsOnly: true
     clientAffinityEnabled: false
     siteConfig: {
-      linuxFxVersion: 'NODE|20-lts'
+      linuxFxVersion: 'NODE|24-lts'
       appCommandLine: 'npm start'
       alwaysOn: true
       http20Enabled: true

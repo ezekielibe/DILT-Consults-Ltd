@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 80" role="img" aria-label="DILT Consults Ltd">
+  <defs>
+    <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5b8cff"/>
+      <stop offset="1" stop-color="#1b3a9c"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(0 8)">
+    <path fill="url(#lg)" fill-rule="evenodd" d="M8 6H30C47 6 58 17 58 32S47 58 30 58H8Z M21 19V45H30C39 45 45 40 45 32S39 19 30 19Z"/>
+    <path d="M27 40L33 33L37 37L43 28" fill="none" stroke="#22d3ee" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="43" cy="28" r="3.6" fill="#22d3ee"/>
+  </g>
+  <text x="76" y="47" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="40" font-weight="800" letter-spacing="1" fill="#0b2a6b">DILT</text>
+  <text x="78" y="67" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="600" letter-spacing="5" fill="#4169e1">CONSULTS LTD</text>
+</svg>

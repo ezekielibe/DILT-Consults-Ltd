@@ -4,3 +4,4 @@ services:
     project: .
     language: js
     host: appservice
+    resourceName: ${AZURE_WEB_APP_NAME}

@@ -3,6 +3,9 @@ const path = require('path');
 const fs = require('fs/promises');
 const crypto = require('crypto');
 const nodemailer = require('nodemailer');
+const { PAGES } = require('./pages');
+const { header, footer, renderPage, renderNotFound } = require('./layout');
+const fsSync = require('fs');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -105,6 +108,13 @@ app.post('/api/enquiries', rateLimit, async (req, res) => {
   }
 });
 
-app.use(express.static(path.join(__dirname, '..', 'public')));
+app.use(express.static(path.join(__dirname, '..', 'public'), { index: false }));
+
+const indexTemplate = fsSync.readFileSync(path.join(__dirname, '..', 'public', 'index.html'), 'utf8');
+app.get('/', (req, res) => {
+  res.type('html').send(indexTemplate.replace('<!--HEADER-->', header('/')).replace('<!--FOOTER-->', footer()));
+});
+PAGES.forEach(p => app.get(p.path, (req, res) => res.type('html').send(renderPage(p))));
+app.use((req, res) => res.status(404).type('html').send(renderNotFound()));
 
 app.listen(PORT, () => console.log(`DILT Consults site running at http://localhost:${PORT}`));
